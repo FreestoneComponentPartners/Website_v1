@@ -211,7 +211,7 @@ img {
   max-width: 1200px; /* adjust if needed */
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   margin-top: 2.25rem;
   align-items: stretch;
 }
