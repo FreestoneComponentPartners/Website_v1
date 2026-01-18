@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Freestone Component Partners</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body>
+  <a class="skip-link" href="index.html#home">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="index.html#home" >Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#what-we-offer">What we offer</a></li>
+        <li><a href="index.html#benefits">Benefits</a></li>
+        <li><a href="imprint.html" class="active">Imprint</a></li>
+      </ul>
+
+      <!-- Language switcher (uncomment if needed)
+      <div class="lang-switcher" aria-label="Language switcher">
+        <a href="/en/index.html" title="English">
+          <img src="https://flagcdn.com/w40/gb.png" alt="English" width="30" height="20" loading="lazy" />
+        </a>
+        <a href="/de/index.html" title="Deutsch">
+          <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" width="30" height="20" loading="lazy" />
+        </a>
+        <a href="/zh/index.html" title="中文">
+          <img src="https://flagcdn.com/w40/cn.png" alt="中文" width="30" height="20" loading="lazy" />
+        </a>
+      </div>
+      -->
+    </nav>
+  </header>
+
+  <main>
+    <section id="contact" class="section section--contact section--dark">
+      <section class="imprint-section">
+        <div class="imprint-card">
+          <h2>Imprint</h2>
+          <p class="imprint-line" id="company"></p>
+          <p class="imprint-line" id="address"></p>
+          <p class="imprint-line" id="city"></p>
+          <p class="imprint-line" id="representative"></p>  
+          <p class="imprint-line">Contact:
+          <a class="emailBtn js-email" href="#" aria-label="Email us"  data-subject="Website inquiry">
+              <span class="email-text"></span>
+          </a>
+          </p>
+          <br>
+          <p class="imprint-line" id="court"></p>
+          <p class="imprint-line" id="register"></p>
+          <p class="imprint-line" id="vat"></p>
+          <p class="imprint-line">
+            <a
+            href="FCP_EN_Imprint_and_Terms_of_Use_2026-01-15.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="privacy-link"
+            >Freestone Component Partners Imprint (PDF)
+          </a>
+          <br>
+          <br>
+          <h2>Data Privacy Notice</h2>
+          <p class="imprint-line">
+            We are neither using cookie technology nor storing any data from our website users.
+          </p>
+          <p class="imprint-line">
+          <a
+            href="FCP_EN_Privacy_Policy_2026-01-15.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="privacy-link"
+            >Freestone Component Partners Data Privacy Notice (PDF)
+          </a>
+          </p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> <span class="js-company-name">Company</span> All rights reserved.</p>
+    <a class="footer-btn" href="imprint.html">Imprint</a>
+  </footer>
+
+  <script>
+    const companyName = "Freestone Component Partners GmbH (in formation)";
+    const emailUser = "sal";
+    const emailUserSplit = "es"
+    const emailDomain = "fcp.gmbh";
+    const emailAddress = `${emailUser}${emailUserSplit}@${emailDomain}`;
+
+    document.querySelectorAll(".js-company-name").forEach(el => {
+      el.textContent = companyName;
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+
+
+    function mailtoHref(subject) {
+      const s = encodeURIComponent(subject || "Website inquiry");
+      return `mailto:${emailAddress}?subject=${s}`;
+    }
+
+    document.querySelectorAll(".js-email").forEach(link => {
+      // Show the email address as plain text
+      const textEl = link.querySelector(".email-text");
+      if (textEl) textEl.textContent = emailAddress;
+
+      // Set a usable href (works even if JS click handler is blocked)
+      link.setAttribute("href", mailtoHref(link.dataset.subject));
+
+      // Keep subject handling consistent on click
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.location.href = mailtoHref(link.dataset.subject);
+      });
+    });
+  </script>
+
+  <script>
+    (function () {
+      const data = {
+        company: ["Freestone Component Partners", " GmbH", " (in formation)"],
+        street: ["Hagack", "erstrasse", " 20"],
+        city: ["8427", " Frei","ens","tein, Switzerland"],
+        court: ["Commercial Register Office: ", "Zuerich, Switzerland"],
+        register: ["Registration Number: ", "will be assigned upon formation"],
+        vat: [
+          "VAT Identification Number: ",
+          "will be assigned upon formation",
+        ],
+        representative: ["Represented by:", " Pet","er ", "Ger","stl"]
+      };
+
+      document.getElementById("company").textContent =
+        data.company.join("");
+
+      document.getElementById("address").textContent =
+        data.street.join("");
+
+      document.getElementById("city").textContent =
+        data.city.join("");
+
+      document.getElementById("court").textContent =
+        data.court.join("");
+
+      document.getElementById("register").textContent =
+        data.register.join("");
+
+      document.getElementById("vat").textContent =
+        data.vat.join("");
+
+      document.getElementById("representative").textContent =
+        data.representative.join("");
+    })();
+  </script>
+</body>
+</html>
