@@ -20,26 +20,13 @@
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
       <ul class="nav-list">
-        <li><a href="index.html#home" >Home</a></li>
+        <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#representatives">Representatives</a></li>
         <li><a href="index.html#what-we-offer">What we offer</a></li>
         <li><a href="index.html#benefits">Benefits</a></li>
         <li><a href="imprint.html" class="active">Imprint</a></li>
       </ul>
-
-      <!-- Language switcher (uncomment if needed)
-      <div class="lang-switcher" aria-label="Language switcher">
-        <a href="/en/index.html" title="English">
-          <img src="https://flagcdn.com/w40/gb.png" alt="English" width="30" height="20" loading="lazy" />
-        </a>
-        <a href="/de/index.html" title="Deutsch">
-          <img src="https://flagcdn.com/w40/de.png" alt="Deutsch" width="30" height="20" loading="lazy" />
-        </a>
-        <a href="/zh/index.html" title="中文">
-          <img src="https://flagcdn.com/w40/cn.png" alt="中文" width="30" height="20" loading="lazy" />
-        </a>
-      </div>
-      -->
     </nav>
   </header>
 
@@ -91,8 +78,11 @@
 
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> <span class="js-company-name">Company</span> All rights reserved.</p>
-    <a class="footer-btn" href="imprint.html">Imprint</a>
-  </footer>
+      <div class="footer-buttons">
+        <a class="footer-btn" href="imprint.html">Imprint</a>
+        <a class="footer-btn js-linkButton" href="#" data-link-url="https://www.linkedin.com/company/freestone-component-partners/"> LinkedIn</a>
+      </div>
+    </footer>
 
   <script>
     const companyName = "Freestone Component Partners GmbH";
@@ -103,6 +93,13 @@
 
     document.querySelectorAll(".js-company-name").forEach(el => {
       el.textContent = companyName;
+    });
+
+    document.querySelectorAll('.js-linkButton').forEach(button => {
+      button.addEventListener('click', () => {
+          const linkURL = button.dataset.linkUrl;
+          window.open(linkURL, '_blank', 'noopener,noreferrer');
+       });
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
