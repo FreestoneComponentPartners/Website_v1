@@ -699,29 +699,3 @@ img {
     height: 36px;
   }
 }
-
-/* =========================================================
-   Mobile typography adjustment only
-   Preserves desktop layout and navigation sizing.
-========================================================= */
-@media (max-width: 768px) {
-  body {
-    font-size: 112.5%;
-    line-height: 1.48;
-  }
-
-  .nav a {
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.25rem, 10vw, 3.1rem);
-    line-height: 1.12;
-  }
-
-  .tagline {
-    font-size: clamp(1.05rem, 5vw, 1.4rem);
-    line-height: 1.35;
-  }
-}
