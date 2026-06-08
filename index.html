@@ -1,602 +1,373 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Freestone Component Partners GmbH – your European sales partner for industrial process plant equipment and special gases.">
-  <meta name="robots" content="index, follow">
-  <title>Freestone Component Partners</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64">
-  <link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
-  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Freestone Component Partners</title>
+<meta name="description" content="Freestone Component Partners GmbH – your European sales partner for industrial process plant equipment and special gases." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-64.png" type="image/png" sizes="64x64">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
-
 <body>
-  <a class="skip-link" href="#home">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav" aria-label="Primary navigation">
-      <ul class="nav-list">
-        <li><a href="index.html#home" class="active">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#representatives">Brands & Partners</a></li>
-        <li><a href="index.html#what-we-offer">What we offer</a></li>
-        <li><a href="index.html#benefits">Benefits</a></li>
-        <li><a href="imprint.html" >Imprint</a></li>
-      </ul>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Freestone Component Partners home">
+      <img src="images/FCP_Logo_white_2026.png" alt="Freestone Component Partners logo" />
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#brands">Brands &amp; Partners</a>
+      <a href="#offer">What we offer</a>
+      <a href="#benefits">Benefits</a>
+      <a data-link-k="mailMain" class="btn btn-primary nav-cta">Get in touch</a>
     </nav>
-  </header>
+    <button class="nav-toggle" id="toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="nav-scrim" id="navscrim" aria-hidden="true"></div>
 
-  <main>
-    <section id="home" class="hero" aria-label="Hero">
-      <img
-        src="images/FCP_Logo_white_2026.png"
-        alt="Freestone Component Partners logo"
-        class="hero-logo"
-        loading="eager"
-        decoding="async"
-      />
-    
-      <div class="hero-content">
-        <h1>Unlock your sales potential in Europe</h1>
-        <!--<p class="tagline">We are a company based in Switzerland.</p>-->
-        <p class="tagline">Reach out now and learn about your sales potential in Europe.</p>
+<!-- HERO (title treatment kept identical: white logo + same headline) -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-tag">European Sales Representation · Cryogenic &amp; Process Plant Equipment</div>
+    <h1>Unlock your sales<br>potential in <span class="glow">Europe</span></h1>
+    <!--<p>Reach out now and learn about your sales potential in Europe.</p>-->
+    <div class="hero-cta">
+      <a data-link-k="mailMain" class="btn btn-primary">Reach out now →</a>
+      <a href="#brands" class="btn btn-ghost">Explore our brands</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- MARKETS MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">LNG</span><span class="marquee-item">Liquid Hydrogen · LH₂</span><span class="marquee-item">Air Separation</span><span class="marquee-item">Hydrogen</span><span class="marquee-item">Olefins</span><span class="marquee-item">Rare Gases</span><span class="marquee-item">Vacuum-Insulated Transfer</span><span class="marquee-item">Process Skids</span>
+    <span class="marquee-item">LNG</span><span class="marquee-item">Liquid Hydrogen · LH₂</span><span class="marquee-item">Air Separation</span><span class="marquee-item">Hydrogen</span><span class="marquee-item">Olefins</span><span class="marquee-item">Rare Gases</span><span class="marquee-item">Vacuum-Insulated Transfer</span><span class="marquee-item">Process Skids</span>
+  
+    <span class="marquee-item">LNG</span><span class="marquee-item">Liquid Hydrogen · LH₂</span><span class="marquee-item">Air Separation</span><span class="marquee-item">Hydrogen</span><span class="marquee-item">Olefins</span><span class="marquee-item">Rare Gases</span><span class="marquee-item">Vacuum-Insulated Transfer</span><span class="marquee-item">Process Skids</span>
+    <span class="marquee-item">LNG</span><span class="marquee-item">Liquid Hydrogen · LH₂</span><span class="marquee-item">Air Separation</span><span class="marquee-item">Hydrogen</span><span class="marquee-item">Olefins</span><span class="marquee-item">Rare Gases</span><span class="marquee-item">Vacuum-Insulated Transfer</span><span class="marquee-item">Process Skids</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="block light" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="kicker">01 — About</span>
+        <h2>About Freestone Component Partners</h2>
+        <p class="about-lead">We combine technical expertise with commercial know-how, sales experience and a broad customer base to help businesses expand their reach into the European market.</p>
+        <p class="about-body">Our team of professionals is dedicated to delivering smart, sustainable and cost-efficient solutions — acting as a specialist bridge between established manufacturers and the European industrial market.</p>
+        <div class="about-logo"><img src="images/FCP_Logo_white_2026.png" alt="Freestone Component Partners" /></div>
       </div>
-    </section>
-
-    <section id="about" class="section section--dark section--secondary-bg">
-      <h2>About Freestone Component Partners</h2>
-      <p class="section-lead">
-        At Freestone Component Partners, we combine technical expertise with commercial know-how, sales experience and a broad customer base to help businesses expanding their reach into the European market.
-        Our team of professionals is dedicated to deliver smart, sustainable and cost-efficient solutions.
-      </p>
-
-      <div class="team-grid" role="list">
-        <article class="team-card" role="listitem">
-            <img class="team-card__avatar" src="images/picture1.png" alt="Partner" loading="lazy" decoding="async" />
-            <!--<h3 class="js-n" data-k="c3"></h3>-->
-            <div class="team-card__header">
-              <h3 class="team-card__title js-n" data-k="a1"></h3></h3>
-              <p class="team-card__role">Managing Director</p>
-            </div>
-            <div class="team-card__text team-card__text--1">
-              <p>Cryogenic equipment</p>
-            </div>
-            <div class="team-card__text team-card__text--2">
-              <p>More than 20 years of sales and product management experience in cryogenic plant equipment</p>
-            </div>
-            <div class="card-actions">
-              <div class="team-actions">
-                <button class="btn btn--primary js-email" type="button" data-subject="Website inquiry">Email us</button>
-                <button class="btn btn--primary js-linkedin" type="button" data-text1="ger" data-text3="ter" data-text2="stl-pe">  LinkedIn</button>
-              </div>
-            </div>
-        </article>
-        
-        <!-- second article
-        <article class="team-card" role="listitem">
-            <img class="team-card__avatar" src="images/picture2.jpeg" alt="Partner" loading="lazy" decoding="async" />
-            <div class="team-card__header">
-              <h3 class="team-card__title js-n" data-k="b7"></h3></h3>
-              <p class="team-card__role">Partner</p>
-            </div>
-            <div class="team-card__text team-card__text--1">
-              <p>Green Gases and certification</p>
-            </div>
-            <div class="team-card__text team-card__text--2">
-              <p>More than 6 years of experience in international BD, Procurement and Asset Management</p>
-            </div>
-            <div class="card-actions">
-              <div class="team-actions">
-                <button class="btn btn--primary js-email" type="button" data-subject="Website inquiry">Email us</button>
-                <button class="btn btn--primary js-linkedin" type="button" data-text1="fra" data-text3="be" data-text2="nzra">  LinkedIn</button>
-              </div>
-            </div>
-        </article>
-        -->
-      
-        <article class="team-card" role="listitem">
-            <img class="team-card__avatar" src="images/picture3.jpg" alt="Partner" loading="lazy" decoding="async" />
-            <!--<h3 class="js-n" data-k="c3"></h3>-->
-            <div class="team-card__header">
-              <h3 class="team-card__title js-n" data-k="c3"></h3></h3>
-              <p class="team-card__role">Partner</p>
-            </div>
-            <div class="team-card__text team-card__text--1">
-              <p>Carbon fiber and mechanical design</p>
-            </div>
-            <div class="team-card__text team-card__text--2">
-              <p>Experience in engineering design and manufacturing processes.</p>
-            </div>
-            <div class="card-actions">
-              <div class="team-actions">
-                <button class="btn btn--primary js-email" type="button" data-subject="Website inquiry">Email us</button>
-                <button class="btn btn--primary js-linkedin" type="button" data-text1="christ" data-text3="stl" data-text2="oph-ger">  LinkedIn</button>
-              </div>
-            </div>
-        </article>
-      </div>
-    </section>
-
-
-    <section id="representatives" class="section section--dark section--secondary-bg">
-      <h2>Represented Brands & Cooperation Partners</h2>
-      <p class="section-lead">
-        At Freestone Component Partners, we represent and work closely with the following companies:
-      </p>
-      <p class="section-lead">
-      <div class="team-grid" role="list">
-
-        <article class="team-card" role="listitem">
-          <img class="team-card-media team-card-media--70" src="images/HL_logo1.png" alt="Holy Cryogenics" loading="lazy" decoding="async" />
-          <div class="team-card__header">
-              <h3 class="team-card__title">Holy Cryogenics</h3>
-          </div>
-          <div class="team-card__text company-card__text--1">
-          <p>Cryogenic and vacuum equipment</p>
-          </div>
-          <div class="team-card__text company-card__text--2">
-           <p> Founded in 1992, Holy Cryogenics specializes in the design and manufacture of high-vacuum insulated piping systems, dynamic vacuum pump systems, and related equipment for transferring cryogenic fluids. </p>
-          </div>
-          <div class="team-card-gallery">
-            <img src="images/HL_Picture1.jpg" alt="HL Picture 1" loading="lazy" decoding="async" />
-            <img src="images/HL_Picture2.png" alt="HL Picture 2" loading="lazy" decoding="async" />
-          </div>
-          <div class="card-actions">
-            <div class="team-actions">
-              <button class="btn btn--primary js-linkButton" type="button" data-link-url="https://www.hlcryo.com/"> Website</button>
-              <button class="btn btn--primary js-linkButton" type="button" data-link-url="https://www.linkedin.com/company/hl-cryogenics/"> LinkedIn</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="team-card" role="listitem">
-          <img class="team-card-media team-card-media--50" src="images/DGS_logo.png" alt="DG Skid" loading="lazy" decoding="async" />
-          <div class="team-card__header"> 
-            <h3 class="team-card__title">DG Skid</h3>
-          </div>
-          <div class="team-card__text company-card__text--1">
-            <p>Automation and Piping for process industries</p>
-          </div>
-          <div class="team-card__text company-card__text--2">
-            <p> Three decades of experience serving process industries, specializing in the engineering, manufacturing, and assembly of components for high- and low-temperature applications.</p>
-          </div>
-          <div class="team-card-gallery">
-            <img src="images/DGS_Picture1.jpg" class="rectangular" alt="DGS Picture 1" loading="lazy" decoding="async" />
-            <img src="images/DGS_Picture2.png" class="rectangular" alt="DGS Picture 2" loading="lazy" decoding="async" />
-          </div>
-          <div class="card-actions">
-            <div class="team-actions">
-              <button class="btn btn--primary js-linkButton" type="button" data-link-url="https://www.dg-skid.com/"> Website</button>
-              <button class="btn btn--primary js-linkButton" type="button" data-link-url="https://www.linkedin.com/company/dg-skid-automation-&-piping-for-process-industries/"> LinkedIn</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="team-card" role="listitem">
-          <img class="team-card-media team-card-media--60" src="images/z_logo.png" alt="Zhongtai Cryogenics" loading="lazy" decoding="async" />
-          <div class="team-card__header">
-              <h3 class="team-card__title">Zhongtai Cryogenics</h3>
-          </div>
-          <div class="team-card__text company-card__text--1">
-          <p>Gas separation, liquefaction and purification</p>
-          </div>
-          <div class="team-card__text company-card__text--2">
-           <p> Founded in 2006, Zhongtai Cryogenics applies cryogenic technology to gas separation, purification, and liquefaction, with patented processes and proven solutions across LNG, air separation, hydrogen, olefins, and rare gas applications.</p>
-          </div>
-          <div class="team-card-gallery">
-            <img src="images/Z_Picture1.png" class="rectangular" alt="Z Picture 1" loading="lazy" decoding="async" />
-            <img src="images/Z_Picture2.png" class="rectangular" alt="Z Picture 2" loading="lazy" decoding="async" />
-          </div>
-          <div class="card-actions">
-            <div class="team-actions">
-              <button class="btn btn--primary js-linkButton" type="button" data-link-url="https://www.zhongtaicryo.com/en/"> Website</button>
-              <!--<button class="btn btn--primary js-linkButton" type="button" data-link-url="https://www.hlcryo.com/"> Website</button>-->
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="what-we-offer" class="section section--dark section--secondary-bg">
-      <h2>What we offer</h2>
-      <div class="wide-card">
-        <ul class="benefits-list">
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- Consulting -->
-              <svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 6.5A2.5 2.5 0 0 1 7.5 4h9A2.5 2.5 0 0 1 19 6.5v5A2.5 2.5 0 0 1 16.5 14H11l-3.5 3v-3H7.5A2.5 2.5 0 0 1 5 11.5z"></path>
-                <path d="M9.2 9.2l1.8 1.8 3.8-3.8"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Consulting</h3>
-              <p>Freestone Components Partners GmbH provides consulting services in cryogenic engineering and technology, as well as in carbon fiber technologies.</p>
-            </div>
-          </li>
-          </ul>
-      </div>
-
-      <div class="wide-card">
-        <ul class="benefits-list">
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- Project Management -->
-                <svg viewBox="0 0 24 24" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="5" width="16" height="14" rx="2.5"></rect>
-                  <path d="M8 3v4"></path>
-                  <path d="M16 3v4"></path>
-                  <path d="M4 9h16"></path>
-                  <path d="M8 13h3"></path>
-                  <path d="M8 16h6"></path>
-                  <path d="M15.5 14.5l1.2 1.2 2.3-2.8"></path>
-                </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Project Management</h3>
-              <p>Freestone Components Partners GmbH offers project management in engineering and product development projects.</p>
-            </div>
-          </li>
-          </ul>
-        </div>
-
-      <div class="wide-card">
-        <ul class="benefits-list">
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- mission / target -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <circle cx="12" cy="12" r="7"></circle>
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M12 2v3"></path>
-                <path d="M22 12h-3"></path>
-                <path d="M12 22v-3"></path>
-                <path d="M2 12h3"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Sales Representative</h3>
-              <p>Our mission is to empower your business to unlock its full sales potential in the European market</p>
-            </div>
-          </li>
-
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- phase 1 / training -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M4 7l8-3 8 3-8 3-8-3Z"></path>
-                <path d="M6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path>
-                <path d="M20 10v6"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Phase 1: Training and Support</h3>
-              <p>Get to know each other, receive product training and create an efficient working relationship between our companies</p>
-            </div>
-          </li>
-
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- phase 2 / handshake -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M8 12l2.2-2.2a3 3 0 0 1 4.2 0L16 11.4"></path>
-                <path d="M2.8 12.2l4-4 4.2 4.2"></path>
-                <path d="M21.2 12.2l-4-4-5.2 5.2"></path>
-                <path d="M9 14l1.2 1.2a2.5 2.5 0 0 0 3.6 0L15.5 13"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Phase 2: Business Development</h3>
-              <p>We actively promote and offer your products and services in Europe, leveraging our local knowledge and network to maximize your sales potential</p>
-            </div>
-          </li>
-
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- phase 3 / megaphone -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M4 12v-2l10-4v12L4 14v-2Z"></path>
-                <path d="M14 9h4l2-2v10l-2-2h-4"></path>
-                <path d="M6 14l1.2 5h2.4L8.5 14"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Phase 3: Sales</h3>
-              <p>We identify business opportunities, use our relationships with potential clients, and negotiate sales contracts on your behalf</p>
-            </div>
-          </li>
-
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- aftermarket / service -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <!-- wrench -->
-                <path d="M14.5 6.5a3.5 3.5 0 0 0-4.8 4.8L4 17v3h3l5.7-5.7a3.5 3.5 0 0 0 4.8-4.8"></path>
-                <circle cx="15.8" cy="8.2" r="0.8"></circle>
-              </svg>
-            </div>
-
-            <div class="benefit-text">
-              <h3>Aftermarket</h3>
-              <p>
-                We support aftermarket activities including service coordination,
-                spare parts distribution and first level technical support
-              </p>
-            </div>
-          </li>
-
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- CTA / mail -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <rect x="4" y="6" width="16" height="12" rx="2"></rect>
-                <path d="M4.5 7.5 12 13l7.5-5.5"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Ready to discuss your market potential?</h3>
-              <p>Get in touch with our team of sales experts
+      <!-- =====================================================
+           TEAM: Um ein weiteres Mitglied hinzuzufügen,
+           einfach den nächsten .member-Block kopieren.
+           ===================================================== -->
+      <div class="team reveal">
+        <div class="member">
+          <img src="images/picture1.png" alt="Managing Director" />
+          <div>
+            <h4 class="js-n" data-k="a1"></h4>
+            <div class="member-title">Managing Director</div>
+            <p>More than 20 years of sales and product management experience in cryogenic plant equipment.</p>
+            <div class="member-links">
+              <a data-link-k="mailMain" class="btn-sm">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                Email
               </a>
-              </p>
+              <a data-link-k="LinkedIn1" target="_blank" rel="noopener" class="btn-sm btn-li">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><circle cx="4" cy="4" r="2"/><rect x="2" y="9" width="4" height="12"/></svg>
+                LinkedIn
+              </a>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div class="member">
+          <img src="images/picture2.jpg" alt="Partner" />
+          <div>
+            <h4 class="js-n" data-k="b2"></h4> <!-- TODO: replace with name -->
+            <div class="member-title">Partner</div>
+            <p>Experience in engineering design and manufacturing processes.</p>
+            <div class="member-links">
+              <a data-link-k="mailMain" class="btn-sm">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+                Email
+              </a>
+              <a data-link-k="LinkedIn2" target="_blank" rel="noopener" class="btn-sm btn-li">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><circle cx="4" cy="4" r="2"/><rect x="2" y="9" width="4" height="12"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="benefits" class="section section--dark section--secondary-bg">
-      <h2>Benefits</h2>
-      <div class="wide-card">
-        <ul class="benefits-list">
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- money -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <rect x="3" y="6" width="18" height="12" rx="2"></rect>
-                <circle cx="12" cy="12" r="3.2"></circle>
-                <path d="M6.5 9.5h0M17.5 14.5h0"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Efficiency in Sales</h3>
-              <p>We achieve lowest possible costs of selling</p>
-            </div>
-          </li>
-          <br />
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- technical competence / verified engineering -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <!-- nodes -->
-                <circle cx="6" cy="6" r="1.6"></circle>
-                <circle cx="18" cy="6" r="1.6"></circle>
-                <circle cx="6" cy="18" r="1.6"></circle>
+<!-- BRANDS -->
+<section class="block dark alt" id="brands">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">02 — Brands &amp; Partners</span>
+      <h2>Represented brands &amp; cooperation partners</h2>
+      <p class="muted">We represent and work closely with the following companies, bringing their proven technology to the European market.</p>
+    </div>
 
-                <!-- connections -->
-                <path d="M7.4 6h9.2"></path>
-                <path d="M6 7.4v9.2"></path>
-
-                <!-- check -->
-                <path d="M13.5 14.5l2 2 4-4"></path>
-               </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Technical competence</h3>
-              <p>We consult your customers with expertise before we sell</p>
-            </div>
-          </li>
-          <br />
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- growth / chart -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M4 19V5"></path>
-                <path d="M4 19h16"></path>
-                <path d="M7 15l4-4 3 3 6-7"></path>
-                <path d="M18.5 7.5H20v1.5"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Growth opportunity</h3>
-              <p>We arrange growth in foreign sales for your company</p>
-            </div>
-          </li>
-          <br />
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- low risk / warning -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M12 3.5l9 16H3l9-16Z"></path>
-                <path d="M12 9v4.5"></path>
-                <circle cx="12" cy="16.8" r="0.9"></circle>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Low-risk sales contracts</h3>
-              <p>We contribute to achieve low-risk contracts for sellers and buyers</p>
-            </div>
-          </li>
-          <br />
-          <li class="benefit-item">
-            <div class="benefit-icon" aria-hidden="true">
-              <!-- full service / globe + clock -->
-              <svg viewBox="0 0 24 24" focusable="false">
-                <circle cx="10" cy="12" r="5.8"></circle>
-                <path d="M4.2 12h11.6"></path>
-                <path d="M10 6.2c1.6 1.8 1.6 9.8 0 11.6"></path>
-                <circle cx="18.2" cy="14.2" r="3.3"></circle>
-                <path d="M18.2 12.7v1.7l1.2 0.7"></path>
-              </svg>
-            </div>
-            <div class="benefit-text">
-              <h3>Full-service</h3>
-              <p>We act as the interface from first customer contact to aftermarket services</p>
-            </div>
-          </li>
-        </ul>
+    <!-- Holy Cryogenics -->
+    <div class="brand-card reveal">
+      <div class="brand-info">
+        <div class="brand-logo-chip"><img src="images/HL_logo1.png" alt="Holy Cryogenics" /></div>
+        <h3>Holy Cryogenics</h3>
+        <div class="sub">Cryogenic &amp; Vacuum Equipment</div>
+        <p>Founded in 1992, Holy Cryogenics specializes in the design and manufacture of high-vacuum insulated piping systems, dynamic vacuum pump systems, and related equipment for transferring cryogenic fluids.</p>
+        <div class="brand-links">
+          <a href="https://www.hlcryo.com/" target="_blank" rel="noopener" class="btn btn-primary">Website ↗</a>
+          <a href="https://www.linkedin.com/company/hl-cryogenics/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> <span class="js-company-name">Company</span> All rights reserved.</p>
-      <div class="footer-buttons">
-        <a class="footer-btn" href="imprint.html">Imprint</a>
-        <a class="footer-btn js-linkButton" href="#" data-link-url="https://www.linkedin.com/company/freestone-component-partners/"> LinkedIn</a>
+      <div class="brand-media">
+        <span class="est">EST. 1992</span>
+        <img src="images/HL_Picture1.png" alt="Holy Cryogenics equipment" />
       </div>
-    </footer>
+    </div>
 
-  <script>
-    const companyName = "Freestone Component Partners GmbH";
-    const emailUser = "sales";
-    const emailDomain = "fcp.gmbh";
+    <!-- DG Skid -->
+    <div class="brand-card reveal">
+      <div class="brand-info">
+        <div class="brand-logo-chip"><img src="images/DGS_logo.png" alt="DG Skid" /></div>
+        <h3>DG Skid</h3>
+        <div class="sub">Automation &amp; Piping for Process Industries</div>
+        <p>Three decades of experience serving process industries, specializing in the engineering, manufacturing, and assembly of components for high- and low-temperature applications.</p>
+        <div class="brand-links">
+          <a href="https://www.dg-skid.com/" target="_blank" rel="noopener" class="btn btn-primary">Website ↗</a>
+          <a href="https://www.linkedin.com/company/dg-skid-automation-&-piping-for-process-industries/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+      <div class="brand-media">
+        <span class="est">EST. 2017</span>
+        <img src="images/DG_nos.jpg" alt="DG Skid components" />
+      </div>
+    </div>
 
-    document.querySelectorAll(".js-company-name").forEach(el => {
-      el.textContent = companyName;
-    });
+    <!-- Zhongtai -->
+    <div class="brand-card reveal">
+      <div class="brand-info">
+        <div class="brand-logo-chip"><img src="images/Z_logo.png" alt="Zhongtai Cryogenics" /></div>
+        <h3>Zhongtai Cryogenics</h3>
+        <div class="sub">Gas Separation · Liquefaction · Purification</div>
+        <p>Founded in 2006, Zhongtai Cryogenics applies cryogenic technology to gas separation, purification, and liquefaction, with patented processes and proven solutions across LNG, air separation, hydrogen, olefins, and rare gas applications.</p>
+        <div class="brand-links">
+          <a href="https://www.zhongtaicryo.com/en/" target="_blank" rel="noopener" class="btn btn-primary">Website ↗</a>
+        </div>
+      </div>
+      <div class="brand-media">
+        <span class="est">EST. 2006</span>
+        <img src="images/Zhongtai_CO_Separation.png" alt="Zhongtai Cryogenics plant" />
+      </div>
+    </div>
+  </div>
+</section>
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+<!-- WHAT WE OFFER -->
+<section class="block light" id="offer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">03 — What we offer</span>
+      <h2>From first contact to aftermarket</h2>
+      <p class="muted">We represent manufacturers across the European market — and back it with hands-on engineering depth.</p>
+    </div>
 
-    function openEmail(subject) {
-      const s = encodeURIComponent(subject || "Website inquiry");
-      window.location.href = `mailto:${emailUser}@${emailDomain}?subject=${s}`;
-    }
+    <!-- FLAGSHIP: sales representation -->
+    <div class="flagship reveal">
+      <h3>Your European sales representative</h3>
+      <p>We sell your products across Europe on your behalf — a low-cost-of-selling route into the market, backed by 20+ years in cryogenic equipment, local market knowledge, and an established network. We run the full cycle, from first introduction to long-term support.</p>
+    </div>
 
-    function buildLinkedInUrl(locale, text1, text2, text3) {
-        const protocol = 'https://';
-        const domain = 'linkedin.com';
-        const path = '/in/';
+    <div class="phase-head reveal">
+      <h2>A three-phase partnership</h2>
+    </div>
+    <div class="phases">
+      <div class="phase reveal">
+        <div class="step">1</div>
+        <span class="tag">Training &amp; Support</span>
+        <h4>Get to know each other</h4>
+        <p>Receive product training and create an efficient working relationship between our companies.</p>
+      </div>
+      <div class="phase reveal">
+        <div class="step">2</div>
+        <span class="tag">Business Development</span>
+        <h4>Promote &amp; position</h4>
+        <p>We actively promote and offer your products and services in Europe, leveraging our local knowledge and network to maximize your sales potential.</p>
+      </div>
+      <div class="phase reveal">
+        <div class="step">3</div>
+        <span class="tag">Sales</span>
+        <h4>Identify &amp; close</h4>
+        <p>We identify business opportunities, use our relationships with potential clients, and negotiate sales contracts on your behalf.</p>
+      </div>
+    </div>
 
-        return protocol + locale + '.' + domain + path + text1 + text2 + text3 + '/';
-      }
+    <div class="aftermarket reveal">
+      <div class="am-txt">
+        <h4>Aftermarket</h4>
+        <p>We support aftermarket activities including service coordination, spare parts distribution and first-level technical support.</p>
+      </div>
+      <span class="am-icon"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></span>
+    </div>
 
-      document.querySelectorAll('.js-linkButton').forEach(button => {
-        button.addEventListener('click', () => {
-          const linkURL = button.dataset.linkUrl;
-          window.open(linkURL, '_blank', 'noopener,noreferrer');
-        });
-      });
+    <!-- STANDALONE SERVICES -->
+    <div class="standalone-head reveal">
+      <h2>Standalone services</h2>
+      <p class="muted">Engaged on their own or alongside representation.</p>
+    </div>
+    <div class="offer-top two">
+      <div class="offer-card reveal">
+        <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 2a7 7 0 0 0-4 12c.5.5 1 1.3 1 2h6c0-.7.5-1.5 1-2a7 7 0 0 0-4-12z"/></svg></span>
+        <h4>Consulting</h4>
+        <p>Consulting in cryogenic engineering and technology, and in carbon fiber technologies.</p>
+      </div>
+      <div class="offer-card reveal">
+        <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></span>
+        <h4>Project Management</h4>
+        <p>End-to-end project management for engineering and product development projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    document.querySelectorAll('.js-linkedin').forEach(button => {
-      button.addEventListener('click', () => {
-        const locale = button.dataset.locale || 'www';
-        const text1 = button.dataset.text1;
-        const text2 = button.dataset.text2;
-        const text3 = button.dataset.text3;
-        const url = buildLinkedInUrl(locale, text1, text2, text3);
-        window.open(url, '_blank', 'noopener,noreferrer');
-      });
-    })
+<!-- BENEFITS -->
+<section class="block dark" id="benefits">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">04 — Benefits</span>
+      <h2>Why partner with us</h2>
+      <p class="muted">A low-risk, full-service route into one of the world's most demanding industrial markets.</p>
+    </div>
+    <div class="benefits reveal">
+      <div class="benefit">
+        <div class="bn">/ 01</div>
+        <h4>Efficiency in sales</h4>
+        <p>We achieve the lowest possible cost of selling.</p>
+      </div>
+      <div class="benefit">
+        <div class="bn">/ 02</div>
+        <h4>Technical competence</h4>
+        <p>We consult your customers with expertise before we sell.</p>
+      </div>
+      <div class="benefit">
+        <div class="bn">/ 03</div>
+        <h4>Growth opportunity</h4>
+        <p>We arrange growth in foreign sales for your company.</p>
+      </div>
+      <div class="benefit">
+        <div class="bn">/ 04</div>
+        <h4>Low-risk contracts</h4>
+        <p>We contribute to low-risk contracts for sellers and buyers alike.</p>
+      </div>
+      <div class="benefit">
+        <div class="bn">/ 05</div>
+        <h4>Full-service</h4>
+        <p>We act as the interface from first customer contact to aftermarket services.</p>
+      </div>
+      <div class="benefit" style="display:flex;flex-direction:column;justify-content:center">
+        <div class="bn">→</div>
+        <h4 style="color:var(--ice)">Ready when you are</h4>
+        <p>Let's map your European market potential together.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    document.querySelectorAll(".js-email").forEach(btn => {
-      btn.addEventListener("click", () => openEmail(btn.dataset.subject));
-    })
-  </script>
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="cta-inner reveal">
+    <span class="kicker" style="justify-content:center">Let's talk</span>
+    <h2 style="margin-top:20px">Ready to discuss your market potential?</h2>
+    <p>Get in touch with our team of sales experts.</p>
+    <div class="hero-cta">
+      <a data-link-k="mailMain" class="btn btn-primary">Reach out now →</a>
+      <a href="https://www.linkedin.com/company/freestone-component-partners/" target="_blank" rel="noopener" class="btn btn-ghost">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav a');
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const currentHash = window.location.hash;
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="flogo" src="images/FCP_Logo_white_2026.png" alt="Freestone Component Partners" />
+        <!--<p class="fdesc">Based in Zurich, Switzerland.</p>-->
+      </div>
+      <div class="foot-col">
+        <h5>Navigate</h5>
+        <a href="#about">About</a>
+        <a href="#brands">Brands &amp; Partners</a>
+        <a href="#offer">What we offer</a>
+        <a href="#benefits">Benefits</a>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <a data-link-k="mailMain" class="js-n" data-k="d4"></a>
+        <a href="https://www.linkedin.com/company/freestone-component-partners/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="imprint.html">Imprint</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Freestone Component Partners GmbH. All rights reserved.</span>
+      <span>fcp.gmbh</span>
+    </div>
+  </div>
+</footer>
 
-  // 1) Reset all active states
-  navLinks.forEach(link => link.classList.remove('active'));
-
-  // 2) Mark current page link active
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href) return;
-
-    const [linkPath, linkHash] = href.split('#');
-
-    const normalizedLinkPath = linkPath === '' ? currentPath : linkPath;
-
-    if (linkHash) {
-      // link points to a section, possibly on this page
-      if (normalizedLinkPath === currentPath && currentHash === `#${linkHash}`) {
-        link.classList.add('active');
-      }
-    } else {
-      // regular page link
-      if (normalizedLinkPath === currentPath) {
-        link.classList.add('active');
-      }
-    }
+<!-- SCRIPT -->
+<script>
+  // sticky nav background on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
   });
 
-  // 3) Scroll-based highlighting for sections on the current page
-  const sections = document.querySelectorAll('section[id]');
+  // mobile menu: toggle, scrim, burger animation, scroll-lock
+  const toggle  = document.getElementById('toggle');
+  const links   = document.getElementById('navlinks');
+  const scrim   = document.getElementById('navscrim');
 
-  if (sections.length > 0) {
-    const observer = new IntersectionObserver(
-      entries => {
-        let visibleSection = null;
-
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            visibleSection = entry.target;
-          }
-        });
-
-        if (!visibleSection) return;
-
-        navLinks.forEach(link => link.classList.remove('active'));
-
-        const id = visibleSection.id;
-
-        // Try both "#id" and "page.html#id"
-        let activeLink =
-          document.querySelector(`.nav a[href="#${id}"]`) ||
-          document.querySelector(`.nav a[href="${currentPath}#${id}"]`);
-
-        if (activeLink) {
-          activeLink.classList.add('active');
-        }
-      },
-      {
-        root: null,
-        rootMargin: '-100px 0px -45% 0px',
-        threshold: 0.1
-      }
-    );
-
-    sections.forEach(section => observer.observe(section));
+  function setMenu(open) {
+    links.classList.toggle('open', open);
+    scrim.classList.toggle('open', open);
+    toggle.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
-  });
-  /*const navLinks = document.querySelectorAll('.nav a');
-  const sections = document.querySelectorAll('section[id]');
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+  toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  scrim.addEventListener('click', () => setMenu(false));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-        navLinks.forEach((link) => link.classList.remove('active'));
-
-        const activeLink = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
-        if (activeLink) {
-          activeLink.classList.add('active');
-        }
-      });
-    },
-    {
-      root: null,
-      rootMargin: '-80px 0px -40% 0px',
-      threshold: 0.1
-    }
-  );
-
-  sections.forEach((section) => observer.observe(section));*/
+  // reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
+
 <script>
   /* scrambled fragments */
   const x9 = 'l';
@@ -620,12 +391,22 @@
   const x18 = 'p';
   const x19 = 'b';
   const x20 = 'R';
+  const x21 = '@';
+  const x22 = 'f';
+  const x23 = 'c';
+  const x24 = '.';
+  const x25 = 'g';
+  const x26 = 'm';
+  const x27 = 'b';
+  const x28 = 'h';
 
   /* assembly maps — correct order is ONLY here */
   const map = {
-    a1: [x0, x1, x7, x2, x4, x14, x11, x2, x13, x6, x7, x9],      
-    b7: [x16, x4, x5, x3, x10, x14, x20, x5, x19, x2],           
-    c3: [x15, x8, x4, x17, x6, x7, x12, x18, x8, x14, x11, x2, x13, x6, x7, x9],
+    a1: [x0, x1, x7, x2, x4, x14, x11, x2, x13, x6, x7, x9],   
+    b2: [x15, x8, x4, x17, x6, x7, x12, x18, x8, x14, x11, x2, x13, x6, x7, x9],   
+    c3: [x16, x4, x5, x3, x10, x14, x20, x5, x19, x2],   
+    d4: [x6, x5, x9, x1, x6, x21, x22, x23, x18, x24, x25, x26, x27, x28],
+
   };
 
   function assemble(k) {
@@ -637,24 +418,53 @@
   document.querySelectorAll('.js-n').forEach(el => {
     el.textContent = assemble(el.dataset.k);
   });
-  document.querySelectorAll(".js-email-plain").forEach(link => {
-    const emailUser = "sal";
-    const emailUserSplit = "es"
-    const emailDomain = "fcp.gmbh";
-    const emailAddress = `${emailUser}${emailUserSplit}@${emailDomain}`;
-    // Show the email address as plain text
-    const textEl = link.querySelector(".email-text");
-    if (textEl) textEl.textContent = emailAddress;
-
-    // Set a usable href (works even if JS click handler is blocked)
-    link.setAttribute("href", mailtoHref(link.dataset.subject));
-
-    // Keep subject handling consistent on click
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.location.href = mailtoHref(link.dataset.subject);
-  });
-});
 </script>
+
+<script>
+  /* link fragments */
+  const l0 = 'mailto:';
+  const l1 = 'sa';
+  const l2 = 'les';
+  const l3 = '@';
+  const l4 = 'fc';
+  const l5 = 'p.gm';
+  const l6 = 'bh';
+
+
+  const l8 = 'https://www.linkedin.com/in/';
+  const l10 = 't';
+  const l11 = 'g';
+  const l12 = 's';
+  const l13 = 'o';
+  const l14 = 'h';
+  const l15 = 'r';
+  const l16 = 'p';
+  const l17 = '-';
+  const l18 = 'e';
+  const l19 = 'c';
+  const l20 = 'l';
+  const l21 = 'i';
+
+  /* link assembly maps */
+  const linkMap = {
+    mailMain: [l0, l1, l2, l3, l4, l5, l6],
+    LinkedIn2: [l8, l19, l14, l15, l21, l12, l10, l13, l16, l14, l17, l11, l18, l15, l12, l10, l20],
+    LinkedIn1: [l8, l11, l18, l15, l12, l10, l20, l17, l16, l18, l10, l18, l15],
+  };
+
+  function assembleLink(k) {
+    const seq = linkMap[k];
+    if (!seq) return '';
+    return seq.join('');
+  }
+
+  document.querySelectorAll('[data-link-k]').forEach(el => {
+    const href = assembleLink(el.dataset.linkK);
+    if (!href) return;
+
+    el.setAttribute('href', href);
+  });
+</script>
+
 </body>
 </html>
