@@ -42,7 +42,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "sales",
-    "url": "https://www.fcp.gmbh/services.html",
+    "url": "https://www.fcp.gmbh/services/",
     "areaServed": "Europe",
     "availableLanguage": ["German", "English"]
   },
@@ -81,57 +81,6 @@
 }
 </script>
 
-<!-- "Unlock" intro animation — kept in the page itself, NOT in css/styles.css,
-     so a stale cached stylesheet can never leave the duplicate word layers
-     visible ("UnlockUnlockUnlock"). The layers are also built by JS below,
-     so without CSS or JS the headline is simply one plain word. -->
-<style>
-  .unlock-split{position:relative;display:inline-block}
-  .unlock-split .uw-top,
-  .unlock-split .uw-bottom{display:inline-block}
-  .unlock-split .uw-top{
-    position:relative;
-    -webkit-clip-path:inset(0 0 48% 0);clip-path:inset(0 0 48% 0);
-    transform:translate(-5px,-16px);filter:blur(4px);
-    animation:topClose .65s cubic-bezier(.33,.9,.4,1) .45s both;
-  }
-  .unlock-split .uw-bottom{
-    position:absolute;left:0;top:0;
-    -webkit-clip-path:inset(48% 0 0 0);clip-path:inset(48% 0 0 0);
-    transform:translate(5px,16px);filter:blur(4px);
-    animation:bottomClose .65s cubic-bezier(.33,.9,.4,1) .45s both;
-  }
-  .unlock-split .seam{
-    position:absolute;left:2%;right:2%;top:50%;height:2px;background:var(--ice);
-    opacity:0;transform:scaleX(.3);transform-origin:center;
-    animation:seamFlash .35s ease-out 1s both;
-  }
-  .unlock-split .sr-only{
-    position:absolute;width:1px;height:1px;padding:0;margin:-1px;
-    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
-  }
-  @keyframes topClose{
-    0%{transform:translate(-5px,-16px);filter:blur(4px)}
-    70%{transform:translate(1px,2px);filter:blur(.5px)}
-    100%{transform:translate(0,0);filter:blur(0)}
-  }
-  @keyframes bottomClose{
-    0%{transform:translate(5px,16px);filter:blur(4px)}
-    70%{transform:translate(-1px,-2px);filter:blur(.5px)}
-    100%{transform:translate(0,0);filter:blur(0)}
-  }
-  @keyframes seamFlash{
-    0%{opacity:0;transform:scaleX(.3)}
-    45%{opacity:.9;transform:scaleX(1)}
-    100%{opacity:0;transform:scaleX(1)}
-  }
-  @media(prefers-reduced-motion:reduce){
-    .unlock-split .uw-top,
-    .unlock-split .uw-bottom{animation:none;transform:none;filter:none}
-    .unlock-split .seam{display:none}
-  }
-</style>
-
 </head>
 <body>
 
@@ -143,10 +92,10 @@
     </a>
     <nav class="nav-links" id="navlinks">
       <a href="#about">About</a>
-      <a href="products.html">Products</a>
-      <a href="brands.html">Brands &amp; Partners</a>
-      <a href="services.html">Partner with us</a>
-      <a href="imprint.html">Imprint</a>
+      <a href="products/">Products</a>
+      <a href="brands/">Brands &amp; Partners</a>
+      <a href="services/">Partner with us</a>
+      <a href="imprint/">Imprint</a>
       <a data-link-k="mailMain" class="btn btn-primary nav-cta">Get in touch</a>
     </nav>
     <button class="nav-toggle" id="toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
@@ -158,11 +107,11 @@
 <section class="hero" id="home">
   <div class="hero-content">
     <div class="hero-tag">Unlock your sales potential in Europe</div>
-    <h1><span class="unlock-split" id="unlockWord">Unlock</span> access to proven <span class="glow">cryogenic</span> technology</h1>
+    <h1>Unlock access to proven <span class="glow">cryogenic</span> technology</h1>
     <!--<p>Reach out now and learn about your sales potential in Europe.</p>-->
     <div class="hero-cta">
       <a data-link-k="mailMain" class="btn btn-primary">Reach out now →</a>
-      <a href="products.html" class="btn btn-ghost">Explore our products</a>
+      <a href="products/" class="btn btn-ghost">Explore our products</a>
     </div>
   </div>
   <div class="scroll-hint"><span>Scroll</span><span class="line"></span></div>
@@ -278,15 +227,15 @@
       <div class="foot-col">
         <h5>Navigate</h5>
         <a href="#about">About</a>
-        <a href="products.html">Products</a>
-        <a href="brands.html">Brands &amp; Partners</a>
-        <a href="services.html">Partner with us</a>
+        <a href="products/">Products</a>
+        <a href="brands/">Brands &amp; Partners</a>
+        <a href="services/">Partner with us</a>
       </div>
       <div class="foot-col">
         <h5>Connect</h5>
         <a data-link-k="mailMain" class="js-n" data-k="d4"></a>
         <a href="https://www.linkedin.com/company/freestone-component-partners/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="imprint.html">Imprint</a>
+        <a href="imprint/">Imprint</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -327,30 +276,6 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: .15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // "Unlock" split animation: the duplicate layers are created here rather
-  // than sitting in the HTML, so the word can never render three times if the
-  // stylesheet is missing, stale or still loading.
-  (function () {
-    const el = document.getElementById('unlockWord');
-    if (!el) return;
-    // only enhance if the browser supports the clip-path the effect relies on
-    if (!(window.CSS && CSS.supports && (CSS.supports('clip-path', 'inset(0 0 48% 0)') ||
-                                         CSS.supports('-webkit-clip-path', 'inset(0 0 48% 0)')))) return;
-    const word = el.textContent.trim();
-    el.textContent = '';
-    const mk = (cls, txt) => {
-      const s = document.createElement('span');
-      s.className = cls;
-      if (txt) s.textContent = txt;
-      if (cls !== 'sr-only') s.setAttribute('aria-hidden', 'true');
-      return s;
-    };
-    el.appendChild(mk('uw-top', word));
-    el.appendChild(mk('uw-bottom', word));
-    el.appendChild(mk('seam'));
-    el.appendChild(mk('sr-only', word));
-  })();
 </script>
 
 <script>
